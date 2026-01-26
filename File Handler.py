@@ -31,6 +31,9 @@ def getData(file):
     return activityList
 
 
+# example of how to call the function
+# activityList, maxTime, maxBudget = getData("input_100.txt")
+# activityList in the format [["Activity1", time required, cost, enjoyment value], [Activity2, ...], ...]
 
-activityList, maxTime, maxBudget = getData("input_100.txt")
+
 
