@@ -6,7 +6,9 @@ Split project into corresponding parts to be finished by 10th Feb:
   
   Will S and Loise - Dynamic Processing 
   
-  Will B and Toby - Brute Force
+  Toby - Brute Force
+
+  Will B - Main event_planner.py
 
 Build Report after this 
 
