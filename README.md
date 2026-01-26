@@ -4,11 +4,13 @@ Split project into corresponding parts to be finished by 10th Feb:
 
   Toby - File Handling - Done 
   
-  Will S and Loise - Dynamic Processing 
+  Will B and Loise  - Dynamic Processing 
   
-  Toby - Brute Force
+  Toby and Anastasija - Brute Force
 
-  Will B - Main event_planner.py
+  Will S - Report - no psuedocode
+
+  Will B - Main event_planner.py - basically doing nada
 
 Build Report after this 
 
