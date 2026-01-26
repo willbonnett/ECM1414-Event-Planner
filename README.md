@@ -4,9 +4,9 @@ Split project into corresponding parts to be finished by 10th Feb:
 
   Toby - File Handling - Done 
   
-  Will B and Loise - Dynamic Processing 
+  Will S and Loise - Dynamic Processing 
   
-  Will S and Toby - Brute Force
+  Will B and Toby - Brute Force
 
 Build Report after this 
 
