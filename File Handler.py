@@ -28,7 +28,7 @@ def getData(file):
         
         activityList.append(nextLine)
 
-    return activityList
+    return activityList, maxTime, maxBudget
 
 
 # example of how to call the function
