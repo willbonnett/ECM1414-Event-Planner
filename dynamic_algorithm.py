@@ -13,8 +13,9 @@ def dymanic_algorithm(activities, constraint, constraint_value, debug = False):
     Then the program will iterate through the available activties and backtrack through the array working out the max enjoyment
     values that can be achieved with the currently selected activity.
 
-    If an activity gets chosen for a larger enjoyment, then in a parallel array, the activity is stored under the index of where it
-    provides the most enjoyment as a way to once all activities have been iterated through return the path.
+    If an activity gets chosen for a larger enjoyment, then in a parallel array, the path to get the current max enjoyment for 
+    that time values is stored. The new largest enjoyment path is just the path of the time before the current activity with
+    the new activity appended on.
 
     Parameters:
     activities - list of activities
