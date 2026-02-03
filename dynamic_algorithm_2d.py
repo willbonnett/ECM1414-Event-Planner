@@ -11,7 +11,7 @@ def dynamic_algorithm_2d(activities, max_t, max_b):
     dp = np.zeros((max_t + 1, max_b + 1))
     
     
-    # store the list of activity names for that specific state
+    # store the list of activity names 
     path = [[[] for _ in range(max_b + 1)] for _ in range(max_t + 1)]
 
     start_time = time.time()
