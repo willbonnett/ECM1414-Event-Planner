@@ -1,13 +1,11 @@
 from File_Handler import getData
 import numpy as np
 
-
-activities, max_time, max_budget = getData("input_10.txt")
 #print(activities)
 
 
 
-def dymanic_algorithm(activities, constraint, constraint_value, debug = False):
+def dymanic_algorithm(activities, maxTime, maxBudget,constraint, debug = False):
     '''
     The function will create a one dimesional array of the length of the max_constraint_value setting values to zero initially.
     Then the program will iterate through the available activties and backtrack through the array working out the max enjoyment
@@ -27,8 +25,10 @@ def dymanic_algorithm(activities, constraint, constraint_value, debug = False):
 
     # Check for the selected constraint
     if constraint == "T":
+        constraint_value = maxTime
         valueIndex = 0
-    elif constraint == "D":
+    elif constraint == "B":
+        constraint_value = maxBudget
         valueIndex = 1
 
     # create arrays of length constraint_value
@@ -53,15 +53,16 @@ def dymanic_algorithm(activities, constraint, constraint_value, debug = False):
                 if debug: print(f"higher maxEnjoyment found, is now {maxEnjoyment[i]} for constrain value:{i}")
 
                 # Update the path that got to the highest
-                path[i] = path[i - values[valueIndex]] + [[activity, values[valueIndex], enjoyment]]
+                path[i] = path[i - values[valueIndex]] + [[activity, values, enjoyment]]
                 if debug: print(f"previous path is {path[i - values[valueIndex]]}")
 
 
-    # Backtrack through the array selecting the last chosen activities
+    # Return the needed values
     i = np.argmax(maxEnjoyment)
-    print("\nSelected Most Efficient path is :" + str(path[i]))
-    print("Time / Budget Used:" + str(i))
-    print("Total Enjoyment:" + str(maxEnjoyment[i]))
+    timeUsed = 0
+    budgetUsed = 0
+    for activity in path[i]:
+        timeUsed += activity[1][0]
+        budgetUsed += activity[1][1]
 
-
-dymanic_algorithm(activities,"T",max_time,True)
+    return path[i], maxEnjoyment[i], timeUsed, budgetUsed

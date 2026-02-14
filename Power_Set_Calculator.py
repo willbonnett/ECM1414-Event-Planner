@@ -1,8 +1,4 @@
 import math
-from File_Handler import getData
-
-activityList, maxTime, maxBudget = getData("input_100.txt")
-
 # create a set of all possible subsets of activityList
 
 def binaryAdd1(trueFalseList):
